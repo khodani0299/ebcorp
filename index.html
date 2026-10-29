@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -14,6 +14,24 @@
   <link rel="stylesheet" href="assets/css/icons.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
+    .footer-dropdown > summary {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      list-style: none;
+    }
+
+    .footer-dropdown > summary::-webkit-details-marker { display: none; }
+    .footer-dropdown > summary::after {
+      content: "+";
+      color: var(--color-primary);
+      font-size: 22px;
+      line-height: 1;
+    }
+    .footer-dropdown[open] > summary::after { content: "-"; }
+
     @media (max-width: 767.98px) {
       .header-layout1 .navbar {
         min-height: 76px;
@@ -205,7 +223,8 @@
             </div><!-- /.col-xl-2 -->
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
               <div class="footer-widget-nav">
-                <h6 class="footer-widget-title">Company</h6>
+                <details class="footer-dropdown">
+                  <summary class="footer-widget-title">Company</summary>
                 <nav>
                   <ul class="footer-nav-list list-unstyled">
                     <li><a href="about-us.html#about">About EBCorp</a></li>
@@ -215,11 +234,13 @@
                     <li><a href="about-us.html#clients">Selected Clients</a></li>
                   </ul>
                 </nav>
+                </details>
               </div><!-- /.footer-widget-nav -->
             </div><!-- /.col-lg-2 -->
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
               <div class="footer-widget-nav">
-                <h6 class="footer-widget-title">Services</h6>
+                <details class="footer-dropdown">
+                  <summary class="footer-widget-title">Services</summary>
                 <nav>
                   <ul class="footer-nav-list list-unstyled">
                     <li><a href="services.html#services">Technical Consulting</a></li>
@@ -230,11 +251,13 @@
                     <li><a href="services.html#services">Enterprise and Supplier Development</a></li>
                   </ul>
                 </nav>
+                </details>
               </div><!-- /.footer-widget-nav -->
             </div><!-- /.col-lg-2 -->
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
               <div class="footer-widget-nav">
-                <h6 class="footer-widget-title">Programme Experience</h6>
+                <details class="footer-dropdown">
+                  <summary class="footer-widget-title">Programme Experience</summary>
                 <nav>
                   <ul class="footer-nav-list list-unstyled">
                     <li><a href="about-us.html#experience">EIP</a></li>
@@ -245,15 +268,18 @@
                     <li><a href="about-us.html#experience">SMEDP</a></li>
                   </ul>
                 </nav>
+                </details>
               </div><!-- /.footer-widget-nav -->
             </div><!-- /.col-lg-2 -->
             <div class="col-6 col-sm-6 col-md-4 col-lg-2">
               <div class="footer-widget-nav">
-                <h6 class="footer-widget-title">Quick Contacts</h6>
+                <details class="footer-dropdown">
+                  <summary class="footer-widget-title">Quick Contacts</summary>
                 <ul class="footer-nav-list contact-list list-unstyled">
                   <li><a href="contact-us.html#contact">EBCorp contact details</a></li>
                   <li><a href="contact-us.html#contact">2nd Floor, PPS Centurion Square, 1262 Heuwel Road, Centurion 0157</a></li>
                 </ul>
+                </details>
               </div><!-- /.footer-widget-contact -->
             </div><!-- /.col-lg-2 -->
           </div><!-- /.row -->
@@ -265,20 +291,6 @@
             <div class="col-12">
               <a href="contact-us.html#contact"
                 class="contatct-text d-flex justify-content-between arrow-hover-flip-up">
-                <span class="contact-text-title">Get In Touch</span>
-                <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="100" height="100"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <g class="arrow-flip-path-1">
-                    <path
-                      d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                      fill="currentColor"></path>
-                  </g>
-                  <g class="arrow-flip-path-2">
-                    <path
-                      d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                      fill="currentColor"></path>
-                  </g>
-                </svg>
               </a>
             </div><!-- /.col-12 -->
             <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
