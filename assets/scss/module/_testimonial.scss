@@ -201,7 +201,7 @@
 .quote-rate,
 .cat-rating,
 .testimonial-rating {
-    color: #ffc400;
+    color: var(--color-primary);
 }
 
 @include responsive-min(md) {

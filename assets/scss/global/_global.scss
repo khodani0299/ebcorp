@@ -86,6 +86,7 @@
     --color-primary-300-rgb: 1, 34, 23;
     /* overide Bootstrap color theme */
     --bs-primary: #{$color-primary};
+    --bs-orange: #{$color-primary};
     --bs-secondary: #{$color-secondary};
     --bs-gray: #{$color-default};
     --bs-gray-dark: #{$color-dark};

@@ -58,7 +58,7 @@
   --font-primary: DM Sans, sans-serif;
   --font-secondary: Unbounded, sans-serif;
   --font-icons: "icomoon";
-  --color-primary: #fe5b2c;
+  --color-primary: #1a7e00;
   --color-primary-200: #03452f;
   --color-primary-300: #012217;
   --color-primary-400: #1c3930;
@@ -67,11 +67,11 @@
   --color-primary-700: #023021;
   --color-primary-800: #0e6118;
   --color-secondary: #222222;
-  --color-primary-rgb: 254, 91, 44;
+  --color-primary-rgb: 26, 126, 0;
   --color-secondary-rgb: 34, 34, 34;
   --color-white: #ffffff;
   --color-accent: #00226c;
-  --color-dark: #161616;
+  --color-dark: #304036;
   --color-light: #6d6fb3;
   --color-default: #9b9b9b;
   --color-gray-100: #f9f9f9;
@@ -84,7 +84,8 @@
   --color-green-100: #d7f6f0;
   --color-primary-300-rgb: 1, 34, 23;
   /* overide Bootstrap color theme */
-  --bs-primary: #fe5b2c;
+  --bs-primary: #1a7e00;
+  --bs-orange: #1a7e00;
   --bs-secondary: #222222;
   --bs-gray: #9b9b9b;
   --bs-gray-dark: #161616;
@@ -93,7 +94,7 @@
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #161616;
-  --bs-primary-rgb: 254, 91, 44;
+  --bs-primary-rgb: 26, 126, 0;
   --bs-secondary-rgb: 34, 34, 34;
   --bs-success-rgb: 25, 135, 84;
   --bs-warning-rgb: 255, 193, 7;
@@ -108,7 +109,7 @@
   --bs-secondary-color-rgb: 33, 37, 41;
   --bs-secondary-bg: #e9ecef;
   --bs-secondary-bg-rgb: 233, 236, 239;
-  --bs-link-color: #fe5b2c;
+  --bs-link-color: #1a7e00;
   --bs-link-color-rgb: 13, 110, 253;
   --bs-link-decoration: none;
   --bs-link-hover-color: #222222;
@@ -137,11 +138,11 @@ body {
 }
 
 body.about-page {
-  background-color: #fbf8f3;
+  background-color: #ffffff;
   background-image:
-    radial-gradient(ellipse at 8% 12%, rgba(254, 91, 44, 0.09), transparent 25%),
-    radial-gradient(ellipse at 92% 43%, rgba(18, 54, 72, 0.07), transparent 26%),
-    radial-gradient(ellipse at 14% 82%, rgba(254, 91, 44, 0.06), transparent 22%);
+    radial-gradient(ellipse at 8% 12%, rgba(26, 126, 0, 0.05), transparent 25%),
+    radial-gradient(ellipse at 92% 43%, rgba(18, 54, 72, 0.04), transparent 26%),
+    radial-gradient(ellipse at 14% 82%, rgba(26, 126, 0, 0.04), transparent 22%);
   background-attachment: fixed;
   overflow-x: hidden;
 }
@@ -1334,7 +1335,7 @@ a.color-white-hover:hover {
   bottom: 0;
   left: 0;
   z-index: -1;
-  background: linear-gradient(to bottom, rgba(37, 55, 69, 0) 0%, rgba(254, 91, 44, 0.04) 3%, var(--color-primary) 80%);
+  background: linear-gradient(to bottom, rgba(37, 55, 69, 0) 0%, rgba(26, 126, 0, 0.04) 3%, var(--color-primary) 80%);
 }
 
 .bg-overlay-secondary-gradient:before {
@@ -2437,7 +2438,7 @@ input[type=radio] {
 }
 
 .rating .active {
-  color: #f4572e;
+  color: var(--color-primary);
 }
 
 .arrow-flip {
@@ -3037,7 +3038,7 @@ input[type=radio] {
   position: absolute;
   width: 64px;
   height: 64px;
-  border: 5px solid #fe5b2c;
+  border: 5px solid #1a7e00;
   border-radius: 50%;
   animation: rotating 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   border-color: var(--color-primary) transparent transparent transparent;
@@ -3093,8 +3094,8 @@ input[type=radio] {
 .navbar .navbar-brand img {
   max-width: 150px;
 }
-.navbar .navbar-brand img.logo-orange {
-  filter: brightness(0) saturate(100%) invert(53%) sepia(91%) saturate(1986%) hue-rotate(359deg) brightness(101%) contrast(105%);
+.navbar .navbar-brand img.logo-green {
+  filter: brightness(0) saturate(100%) invert(32%) sepia(88%) saturate(1677%) hue-rotate(86deg) brightness(90%) contrast(104%);
 }
 .navbar .logo-light {
   display: none;
@@ -4656,11 +4657,14 @@ input[type=radio] {
     Footer
 --------------------------*/
 .footer {
-  --footer-primary-padding: 105px 0 50px;
-  --secondary-primary-padding: 0 0 30px;
-  --widget-margin-bottom: 30px;
-  --widget-title-margin-bottom: 33px;
+  --footer-primary-padding: 55px 0 15px;
+  --secondary-primary-padding: 0 0 16px;
+  --widget-margin-bottom: 18px;
+  --widget-title-margin-bottom: 16px;
   --nav-link-size: 15px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url("../images/ebcorp/teamwork.jpg");
+  background-position: center;
+  background-size: cover;
   background-color: var(--color-dark);
 }
 .footer .footer-primary {
@@ -4763,6 +4767,9 @@ input[type=radio] {
   padding-bottom: var(--text-padding-bottom);
   margin-bottom: 30px;
 }
+.footer .contatct-text:empty {
+  display: none !important;
+}
 .footer .contatct-text:before, .footer .contatct-text:after {
   content: "";
   position: absolute;
@@ -4772,7 +4779,7 @@ input[type=radio] {
 }
 .footer .contatct-text:before {
   width: 100%;
-  background-color: #404040;
+  background-color: #ffffff;
 }
 .footer .contatct-text:after {
   width: 0;
@@ -4883,10 +4890,10 @@ input[type=radio] {
 }
 @media (max-width: 1200px) {
   .footer {
-    --footer-primary-padding: 35px 0 0;
-    --secondary-primary-padding: 0 0 20px;
-    --widget-margin-bottom: 20px;
-    --widget-title-margin-bottom: 15px;
+    --footer-primary-padding: 24px 0 0;
+    --secondary-primary-padding: 0 0 12px;
+    --widget-margin-bottom: 14px;
+    --widget-title-margin-bottom: 10px;
     --nav-link-size: 13px;
   }
   .footer .contatct-text {
@@ -6124,7 +6131,7 @@ input[type=radio] {
 .quote-rate,
 .cat-rating,
 .testimonial-rating {
-  color: #ffc400;
+  color: var(--color-primary);
 }
 
 @media (min-width: 992px) {

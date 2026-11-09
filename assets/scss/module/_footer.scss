@@ -2,11 +2,14 @@
     Footer
 --------------------------*/
 .footer {
-    --footer-primary-padding: 105px 0 50px;
-    --secondary-primary-padding: 0 0 30px;
-    --widget-margin-bottom: 30px;
-    --widget-title-margin-bottom: 33px;
+    --footer-primary-padding: 55px 0 15px;
+    --secondary-primary-padding: 0 0 16px;
+    --widget-margin-bottom: 18px;
+    --widget-title-margin-bottom: 16px;
     --nav-link-size: 15px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url("../images/ebcorp/teamwork.jpg");
+    background-position: center;
+    background-size: cover;
     background-color: var(--color-dark);
 
     .footer-primary {
@@ -129,6 +132,10 @@
         position: relative;
         padding-bottom: var(--text-padding-bottom);
         margin-bottom: 30px;
+
+        &:empty {
+            display: none !important;
+        }
 
         &:before,
         &:after {
@@ -274,10 +281,10 @@
 
 @media (max-width: 1200px) {
     .footer {
-        --footer-primary-padding: 35px 0 0;
-        --secondary-primary-padding: 0 0 20px;
-        --widget-margin-bottom: 20px;
-        --widget-title-margin-bottom: 15px;
+        --footer-primary-padding: 24px 0 0;
+        --secondary-primary-padding: 0 0 12px;
+        --widget-margin-bottom: 14px;
+        --widget-title-margin-bottom: 10px;
         --nav-link-size: 13px;
 
         .contatct-text {
