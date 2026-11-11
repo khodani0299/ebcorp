@@ -4662,7 +4662,7 @@ input[type=radio] {
   --widget-margin-bottom: 18px;
   --widget-title-margin-bottom: 16px;
   --nav-link-size: 15px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url("../images/ebcorp/teamwork.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.68)), url("../images/ebcorp/two-colleagues-discussing-data-working-and-tablet-laptop-with-on-on-architectural-project-at-construction-site-at-desk-in-office-free-photo.jpg");
   background-position: center;
   background-size: cover;
   background-color: var(--color-dark);
@@ -7610,6 +7610,67 @@ textarea.form-control {
   background-repeat: no-repeat;
   background-size: auto !important;
   background-position: 20px calc(100% + 105px) !important;
+}
+
+.services-page-feature > .container > .row-gutter-0 {
+  align-items: stretch;
+}
+.services-page-feature > .container > .row-gutter-0 > [class*=col-] {
+  display: flex;
+}
+.services-page-feature > .container > .row-gutter-0 .service-item {
+  width: 100%;
+  height: 100%;
+}
+.services-page-feature > .container > .row-gutter-0 .service-body {
+  display: flex;
+  height: 100%;
+  min-height: 320px;
+  flex-direction: column;
+}
+.services-page-feature > .container > .row-gutter-0 .service-desc {
+  flex: 1;
+}
+.services-page-feature > .container > .row-gutter-0 .service-icon {
+  margin-top: auto;
+}
+.services-page-feature .services-feature-intro {
+  --bs-gutter-x: 0;
+  margin-inline: 0;
+}
+.services-page-feature .services-feature-image {
+  height: 100%;
+  min-height: 340px;
+  overflow: hidden;
+}
+.services-page-feature .services-feature-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 340px;
+  object-fit: cover;
+}
+.services-page-feature .services-feature-copy {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(24px, 4vw, 56px);
+  background-color: var(--color-gray-100);
+  border-inline-start: 4px solid var(--color-primary);
+}
+.services-page-feature .services-feature-copy .heading-desc:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .services-page-feature .services-feature-image,
+  .services-page-feature .services-feature-image img {
+    min-height: 280px;
+  }
+  .services-page-feature .services-feature-copy {
+    border-inline-start: 0;
+    border-top: 4px solid var(--color-primary);
+  }
 }
 
 .services-layout5 .service-item {
