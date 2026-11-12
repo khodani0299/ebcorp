@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Company profile, project experience, qualifications and selected clients of Eagles & Butterflies Corporation." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon/ebcorp.svg">
+  <title>Company | Eagles &amp; Butterflies Corporation</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Unbounded:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="assets/css/libraries.css">
+  <link rel="stylesheet" href="assets/css/icons.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .company-page .company-intro,
+    .company-page .company-qualifications,
+    .company-page .company-clients {
+      padding: 90px 0;
+    }
+
+    .company-page .company-intro {
+      background: #f5f8f5;
+    }
+
+    .company-page .company-intro-grid {
+      align-items: center;
+    }
+
+    .company-page .company-intro-copy {
+      max-width: 650px;
+    }
+
+    .company-page .company-founder-image {
+      width: 100%;
+      max-height: 490px;
+      object-fit: cover;
+      border-radius: 6px;
+      box-shadow: 0 18px 45px rgba(27, 45, 34, 0.16);
+    }
+
+    .company-page .company-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .company-page .company-stat {
+      min-height: 112px;
+      padding: 18px 16px;
+      background: var(--color-white);
+      border-bottom: 3px solid var(--color-primary);
+    }
+
+    .company-page .company-stat strong,
+    .company-page .company-stat span {
+      display: block;
+    }
+
+    .company-page .company-stat strong {
+      color: var(--color-secondary);
+      font-size: 23px;
+      line-height: 1.2;
+    }
+
+    .company-page .company-stat span {
+      margin-top: 7px;
+      color: var(--color-default);
+      font-size: 13px;
+      line-height: 1.45;
+    }
+
+    .company-page .company-section {
+      padding: 90px 0;
+    }
+
+    .company-page .company-section-heading {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .company-page .company-process-card {
+      height: 100%;
+      min-height: 245px;
+      padding: 30px;
+      background: var(--color-white);
+      border: 1px solid #e8eee8;
+      border-radius: 6px;
+      box-shadow: 0 10px 30px rgba(27, 45, 34, 0.06);
+    }
+
+    .company-page .company-process-icon {
+      display: flex;
+      width: 52px;
+      height: 52px;
+      margin-bottom: 24px;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-primary);
+      background: #edf4ed;
+      border-radius: 50%;
+      font-size: 22px;
+    }
+
+    .company-page .company-qualifications {
+      background: #f5f8f5;
+    }
+
+    .company-page .qualification-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 28px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .company-page .qualification-list li {
+      position: relative;
+      padding: 0 0 14px 22px;
+      border-bottom: 1px solid #e1e9e1;
+    }
+
+    .company-page .qualification-list li::before {
+      position: absolute;
+      top: 0.55em;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      background: var(--color-primary);
+      border-radius: 50%;
+      content: "";
+    }
+
+    .company-page .client-logo-card {
+      display: flex;
+      min-height: 112px;
+      padding: 18px;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-white);
+      border: 1px solid #e8eee8;
+      border-radius: 6px;
+    }
+
+    .company-page .client-logo-card img {
+      width: 100%;
+      max-width: 155px;
+      max-height: 72px;
+      object-fit: contain;
+    }
+
+    @media (max-width: 767.98px) {
+      .company-page .company-intro,
+      .company-page .company-qualifications,
+      .company-page .company-clients,
+      .company-page .company-section {
+        padding: 64px 0;
+      }
+
+      .company-page .company-founder-image {
+        max-height: 360px;
+      }
+
+      .company-page .company-stats {
+        gap: 8px;
+      }
+
+      .company-page .company-stat {
+        min-height: 100px;
+        padding: 14px 10px;
+      }
+
+      .company-page .company-stat strong {
+        font-size: 19px;
+      }
+
+      .company-page .company-stat span {
+        font-size: 12px;
+      }
+
+      .company-page .qualification-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body class="company-page">
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading"><span></span><span></span><span></span><span></span></div>
+    </div>
+
+    <header class="header header-layout1">
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/ebcorp/ebcorp-logo.png" class="logo-light logo-green" alt="Eagles &amp; Butterflies Corporation">
+            <img src="assets/images/ebcorp/ebcorp-logo.png" class="logo-dark logo-green" alt="Eagles &amp; Butterflies Corporation">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a href="index.html" class="nav-item-link">HOME</a></li>
+              <li class="nav-item"><a href="about-us.html#about" class="nav-item-link">ABOUT US</a></li>
+              <li class="nav-item has-dropdown">
+                <a href="company.html" class="dropdown-toggle nav-item-link active">COMPANY</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a href="#about" class="nav-item-link">ABOUT EBCORP</a></li>
+                  <li class="nav-item"><a href="#experience" class="nav-item-link">PROJECT EXPERIENCE</a></li>
+                  <li class="nav-item"><a href="#qualifications" class="nav-item-link">QUALIFICATIONS</a></li>
+                  <li class="nav-item"><a href="#clients" class="nav-item-link">SELECTED CLIENTS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item has-dropdown">
+                <a href="services.html" class="dropdown-toggle nav-item-link">SERVICES</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a href="services.html#technical-consulting" class="nav-item-link">TECHNICAL CONSULTING</a></li>
+                  <li class="nav-item"><a href="services.html#grant-administration" class="nav-item-link">GRANT ADMINISTRATION</a></li>
+                  <li class="nav-item"><a href="services.html#project-appraisal" class="nav-item-link">CAPITAL PROJECTS APPRAISAL</a></li>
+                  <li class="nav-item"><a href="services.html#project-finance" class="nav-item-link">PROJECT FINANCE AND SYNDICATION</a></li>
+                  <li class="nav-item"><a href="services.html#bee-strategy" class="nav-item-link">BEE STRATEGY AND SME DEVELOPMENT</a></li>
+                  <li class="nav-item"><a href="services.html#enterprise-development" class="nav-item-link">ENTERPRISE AND SUPPLIER DEVELOPMENT</a></li>
+                </ul>
+              </li>
+              <li class="nav-item has-dropdown">
+                <a href="programme-experience.html" class="dropdown-toggle nav-item-link">PROGRAMME EXPERIENCE</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a href="programme-experience.html#eip" class="nav-item-link">EIP</a></li>
+                  <li class="nav-item"><a href="programme-experience.html#apss" class="nav-item-link">APSS</a></li>
+                  <li class="nav-item"><a href="programme-experience.html#spp" class="nav-item-link">SPP</a></li>
+                  <li class="nav-item"><a href="programme-experience.html#isp" class="nav-item-link">ISP</a></li>
+                  <li class="nav-item"><a href="programme-experience.html#tsp" class="nav-item-link">TSP</a></li>
+                  <li class="nav-item"><a href="programme-experience.html#smedp" class="nav-item-link">SMEDP</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a href="contact-us.html#contact" class="nav-item-link">CONTACT</a></li>
+            </ul>
+            <button class="close-mobile-menu d-flex justify-content-center align-items-center d-lg-none">
+              <i class="icon-close"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="page-title-layout5 page-title-light bg-parallax bg-overlay">
+      <div class="bg-img"><img src="assets/images/ebcorp/clean_construction_high_quality.jpg" alt="Business professionals discussing a project"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 text-center">
+            <h1 class="pagetitle-heading">Company</h1>
+            <p class="pagetitle-desc mx-auto">Our profile, project experience, qualifications and selected clients.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-intro" id="about">
+      <div class="container">
+        <div class="row company-intro-grid">
+          <div class="col-12 col-lg-6 mb-40 mb-lg-0">
+            <div class="company-intro-copy">
+              <span class="heading-subtitle">EAGLES &amp; BUTTERFLIES CORPORATION</span>
+              <h2 class="heading-title mb-25">Practical expertise for projects that move business forward.</h2>
+              <p class="heading-desc">EBCorp is a transaction advisory firm supporting development and investment projects across sectors, from early assessment through implementation and closure.</p>
+              <p class="heading-desc mb-0">Our work includes technical consulting, grant administration, project appraisal and finance, BEE strategy, SME development, coaching and mentorship, and enterprise and supplier development.</p>
+              <div class="company-stats" aria-label="Company experience highlights">
+                <div class="company-stat"><strong>14+</strong><span>YEARS OF EXPERIENCE</span></div>
+                <div class="company-stat"><strong>54</strong><span>PROJECTS PER YEAR ON AVERAGE</span></div>
+                <div class="company-stat"><strong>R1M–R200M</strong><span>RECORDED PROJECT VALUES</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 offset-lg-1">
+            <img class="company-founder-image" src="assets/images/ebcorp/ambani-ramaru.jpg" alt="EBCorp founder Ambani Ramaru">
+            <p class="heading-desc mt-15 mb-0">Ambani Ramaru, Founder and Principal Strategist</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-section" id="experience">
+      <div class="container">
+        <div class="company-section-heading">
+          <span class="heading-subtitle">FROM ASSESSMENT TO CLOSURE</span>
+          <h2 class="heading-title">Project Experience</h2>
+          <p class="heading-desc">A hands-on approach built around the full investment project lifecycle.</p>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-4 mb-20">
+            <article class="company-process-card">
+              <div class="company-process-icon"><i class="icon-search"></i></div>
+              <h3 class="fancybox-title">Screen and assess</h3>
+              <p class="fancybox-desc mb-0">Establish project eligibility, objectives and key information for review.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4 mb-20">
+            <article class="company-process-card">
+              <div class="company-process-icon"><i class="icon-layers"></i></div>
+              <h3 class="fancybox-title">Appraise and review</h3>
+              <p class="fancybox-desc mb-0">Conduct appraisal and due diligence, with technical and credit committee review and legal vetting.</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-4 mb-20">
+            <article class="company-process-card">
+              <div class="company-process-icon"><i class="icon-business-and-finance"></i></div>
+              <h3 class="fancybox-title">Implement and close</h3>
+              <p class="fancybox-desc mb-0">Support site visits, fund disbursement, implementation and project closure.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-qualifications" id="qualifications">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-5 mb-30 mb-lg-0">
+            <span class="heading-subtitle">EDUCATION AND PROFESSIONAL DEVELOPMENT</span>
+            <h2 class="heading-title">Qualifications</h2>
+            <p class="heading-desc">Education and specialist training across finance, governance, economic analysis and business development.</p>
+            <p class="heading-desc mb-0">International exposure includes London (2013), Copenhagen (2011) and Rome (2009), with additional travel to Paris, Bologna, Cecilia, Venice, Munich and Copenhagen.</p>
+          </div>
+          <div class="col-12 col-lg-6 offset-lg-1">
+            <ul class="qualification-list">
+              <li>MDP-BBBEE, Wits (2014)</li>
+              <li>Project Finance, London School of Finance (2013)</li>
+              <li>Ethics and Corporate Governance, University of Pretoria (2013)</li>
+              <li>Financial Modelling, IRR South Africa (2012)</li>
+              <li>National Diploma in Economic Management Analysis, Unisa (2011)</li>
+              <li>Italian SMME model (2009)</li>
+              <li>Financial Management, University of Pretoria (2008)</li>
+              <li>Pastel Accounting (2002)</li>
+              <li>Certificates in South African market regulations, international capital markets and bookkeeping (2001)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="company-clients" id="clients">
+      <div class="container">
+        <div class="company-section-heading">
+          <span class="heading-subtitle">TRUSTED PARTNERSHIPS</span>
+          <h2 class="heading-title">Selected Clients</h2>
+        </div>
+        <div class="row align-items-center justify-content-center">
+          <div class="col-6 col-md-4 col-lg mb-15"><div class="client-logo-card"><img src="assets/images/drdlr-layer-402x157.png" alt="Department of Rural Development and Land Reform" loading="lazy"></div></div>
+          <div class="col-6 col-md-4 col-lg mb-15"><div class="client-logo-card"><img src="assets/images/idc-logo-400-401x156.png" alt="Industrial Development Corporation" loading="lazy"></div></div>
+          <div class="col-6 col-md-4 col-lg mb-15"><div class="client-logo-card"><img src="assets/images/yawee-logo-2-400x156.png" alt="Yawee" loading="lazy"></div></div>
+          <div class="col-6 col-md-4 col-lg mb-15"><div class="client-logo-card"><img src="assets/images/untitled-4-402x157.jpg" alt="Pension Funds Adjudicator" loading="lazy"></div></div>
+          <div class="col-6 col-md-4 col-lg mb-15"><div class="client-logo-card"><img src="assets/images/competition-tribunal-logo-401x156.jpg" alt="Competition Tribunal South Africa" loading="lazy"></div></div>
+          <div class="col-6 col-md-4 col-lg mb-15"><div class="client-logo-card"><img src="assets/images/fasset.png" alt="Fasset" loading="lazy"></div></div>
+          <div class="col-6 col-md-4 col-lg mb-15"><div class="client-logo-card"><img src="assets/images/durafoam.png" alt="Durafoam Distributors" loading="lazy"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+              <div class="footer-widget-about">
+                <h6 class="footer-widget-title">For information about EBCorp's services and project experience, contact the team.</h6>
+                <a href="contact-us.html#contact" class="btn btn-white arrow-hover-flip-up">
+                  <span>Contact EBCorp</span>
+                  <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="12" height="12"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <g class="arrow-flip-path-1">
+                      <path
+                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
+                              fill="currentColor"></path>
+                    </g>
+                    <g class="arrow-flip-path-2">
+                      <path
+                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
+                              fill="currentColor"></path>
+                    </g>
+                  </svg>
+                </a>
+              </div><!-- /.footer-widget-nav -->
+            </div><!-- /.col-xl-2 -->
+
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-primary -->
+      <div class="footer-secondary">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <a href="contact-us.html#contact"
+                 class="contatct-text d-flex justify-content-between arrow-hover-flip-up">
+              </a>
+            </div><!-- /.col-12 -->
+            <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+              <div class="footer-copyrights my-2">
+                <span class="fz-14">&copy;2026 | Eagles & Butterflies Corporation - All Rights Reserved.</span>
+              </div>
+              <nav>
+                <ul class="footer-copyright-links d-flex align-items-center list-unstyled flex-wrap my-2">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div><!-- /.col-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-secondary -->
+    </footer>
+  </div>
+  <script src="assets/js/libraries.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

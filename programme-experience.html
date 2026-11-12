@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Explore EBCorp's recorded programme experience." />
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon/ebcorp.svg">
+  <title>Programme Experience | Eagles &amp; Butterflies Corporation</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Unbounded:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="assets/css/libraries.css">
+  <link rel="stylesheet" href="assets/css/icons.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    .programme-experience-page .programme-section {
+      padding: 90px 0;
+      background: #f5f8f5;
+    }
+
+    .programme-experience-page .programme-intro {
+      max-width: 700px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+
+    .programme-experience-page .programme-card-wrap {
+      display: flex;
+      margin-bottom: 24px;
+      scroll-margin-top: 125px;
+    }
+
+    .programme-experience-page .programme-card {
+      position: relative;
+      display: flex;
+      width: 100%;
+      min-height: 220px;
+      padding: 30px;
+      flex-direction: column;
+      overflow: hidden;
+      background: var(--color-white);
+      border: 1px solid #e6ece6;
+      border-radius: 6px;
+      box-shadow: 0 10px 28px rgba(27, 45, 34, 0.06);
+    }
+
+    .programme-experience-page .programme-card::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--color-primary);
+      content: "";
+    }
+
+    .programme-experience-page .programme-code {
+      margin-bottom: 24px;
+      color: var(--color-primary);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+    }
+
+    .programme-experience-page .programme-dates {
+      margin-top: auto;
+      padding-top: 18px;
+      color: var(--color-secondary);
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .programme-experience-page .programme-note {
+      margin-top: 28px;
+      padding: 18px 22px;
+      background: #eaf1ea;
+      border-left: 3px solid var(--color-primary);
+      text-align: left;
+    }
+
+    @media (max-width: 767.98px) {
+      .programme-experience-page .programme-section {
+        padding: 64px 0;
+      }
+
+      .programme-experience-page .programme-card {
+        min-height: 190px;
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body class="programme-experience-page">
+  <div class="wrapper">
+    <div class="preloader">
+      <div class="loading"><span></span><span></span><span></span><span></span></div>
+    </div>
+
+    <header class="header header-layout1">
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/ebcorp/ebcorp-logo.png" class="logo-light logo-green" alt="Eagles &amp; Butterflies Corporation">
+            <img src="assets/images/ebcorp/ebcorp-logo.png" class="logo-dark logo-green" alt="Eagles &amp; Butterflies Corporation">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a href="index.html" class="nav-item-link">HOME</a></li>
+              <li class="nav-item"><a href="about-us.html#about" class="nav-item-link">ABOUT US</a></li>
+              <li class="nav-item has-dropdown">
+                <a href="company.html" class="dropdown-toggle nav-item-link">COMPANY</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a href="company.html#about" class="nav-item-link">ABOUT EBCORP</a></li>
+                  <li class="nav-item"><a href="company.html#experience" class="nav-item-link">PROJECT EXPERIENCE</a></li>
+                  <li class="nav-item"><a href="company.html#qualifications" class="nav-item-link">QUALIFICATIONS</a></li>
+                  <li class="nav-item"><a href="company.html#clients" class="nav-item-link">SELECTED CLIENTS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item has-dropdown">
+                <a href="services.html" class="dropdown-toggle nav-item-link">SERVICES</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a href="services.html#technical-consulting" class="nav-item-link">TECHNICAL CONSULTING</a></li>
+                  <li class="nav-item"><a href="services.html#grant-administration" class="nav-item-link">GRANT ADMINISTRATION</a></li>
+                  <li class="nav-item"><a href="services.html#project-appraisal" class="nav-item-link">CAPITAL PROJECTS APPRAISAL</a></li>
+                  <li class="nav-item"><a href="services.html#project-finance" class="nav-item-link">PROJECT FINANCE AND SYNDICATION</a></li>
+                  <li class="nav-item"><a href="services.html#bee-strategy" class="nav-item-link">BEE STRATEGY AND SME DEVELOPMENT</a></li>
+                  <li class="nav-item"><a href="services.html#enterprise-development" class="nav-item-link">ENTERPRISE AND SUPPLIER DEVELOPMENT</a></li>
+                </ul>
+              </li>
+              <li class="nav-item has-dropdown">
+                <a href="programme-experience.html" class="dropdown-toggle nav-item-link active">PROGRAMME EXPERIENCE</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a href="#eip" class="nav-item-link">EIP</a></li>
+                  <li class="nav-item"><a href="#apss" class="nav-item-link">APSS</a></li>
+                  <li class="nav-item"><a href="#spp" class="nav-item-link">SPP</a></li>
+                  <li class="nav-item"><a href="#isp" class="nav-item-link">ISP</a></li>
+                  <li class="nav-item"><a href="#tsp" class="nav-item-link">TSP</a></li>
+                  <li class="nav-item"><a href="#smedp" class="nav-item-link">SMEDP</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"><a href="contact-us.html#contact" class="nav-item-link">CONTACT</a></li>
+            </ul>
+            <button class="close-mobile-menu d-flex justify-content-center align-items-center d-lg-none">
+              <i class="icon-close"></i>
+            </button>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="page-title-layout5 page-title-light bg-parallax bg-overlay">
+      <div class="bg-img"><img src="assets/images/ebcorp/clean_construction_high_quality.jpg" alt="Business professionals discussing a project"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 text-center">
+            <h1 class="pagetitle-heading">Programme Experience</h1>
+            <p class="pagetitle-desc mx-auto">Programmes recorded in the EBCorp company profile.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="programme-section">
+      <div class="container">
+        <div class="programme-intro">
+          <span class="heading-subtitle">A RECORD OF PROGRAMME INVOLVEMENT</span>
+          <h2 class="heading-title">Programme Experience</h2>
+          <p class="heading-desc">The programmes and dates below are taken from the EBCorp company profile.</p>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-4 programme-card-wrap" id="eip">
+            <article class="programme-card">
+              <span class="programme-code">PROGRAMME 01</span>
+              <h3 class="heading-subtitle mb-0">EIP</h3>
+              <p class="programme-dates mb-0">2008–2014</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 programme-card-wrap" id="apss">
+            <article class="programme-card">
+              <span class="programme-code">PROGRAMME 02</span>
+              <h3 class="heading-subtitle mb-0">APSS</h3>
+              <p class="programme-dates mb-0">2017</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 programme-card-wrap" id="spp">
+            <article class="programme-card">
+              <span class="programme-code">PROGRAMME 03</span>
+              <h3 class="heading-subtitle mb-0">SPP</h3>
+              <p class="programme-dates mb-0">2016–2017</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 programme-card-wrap" id="isp">
+            <article class="programme-card">
+              <span class="programme-code">PROGRAMME 04</span>
+              <h3 class="heading-subtitle mb-0">ISP</h3>
+              <p class="programme-dates mb-0">2013–2017</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 programme-card-wrap" id="tsp">
+            <article class="programme-card">
+              <span class="programme-code">PROGRAMME 05</span>
+              <h3 class="heading-subtitle mb-0">TSP</h3>
+              <p class="programme-dates mb-0">2008–2013</p>
+            </article>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 programme-card-wrap" id="smedp">
+            <article class="programme-card">
+              <span class="programme-code">PROGRAMME 06</span>
+              <h3 class="heading-subtitle mb-0">SMEDP</h3>
+              <p class="programme-dates mb-0">2006–2008</p>
+            </article>
+          </div>
+        </div>
+        <p class="heading-desc programme-note mb-0"><strong>...</strong> .</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-8">
+              <div class="footer-widget-about">
+                <h6 class="footer-widget-title">For information about EBCorp's services and project experience, contact the team.</h6>
+                <a href="contact-us.html#contact" class="btn btn-white arrow-hover-flip-up">
+                  <span>Contact EBCorp</span>
+                  <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="12" height="12"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <g class="arrow-flip-path-1">
+                      <path
+                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
+                              fill="currentColor"></path>
+                    </g>
+                    <g class="arrow-flip-path-2">
+                      <path
+                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
+                              fill="currentColor"></path>
+                    </g>
+                  </svg>
+                </a>
+              </div><!-- /.footer-widget-nav -->
+            </div><!-- /.col-xl-2 -->
+
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-primary -->
+      <div class="footer-secondary">
+        <div class="container">
+          <div class="row align-items-center">
+            <div class="col-12">
+              <a href="contact-us.html#contact"
+                 class="contatct-text d-flex justify-content-between arrow-hover-flip-up">
+              </a>
+            </div><!-- /.col-12 -->
+            <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
+              <div class="footer-copyrights my-2">
+                <span class="fz-14">&copy;2026 | Eagles & Butterflies Corporation - All Rights Reserved.</span>
+              </div>
+              <nav>
+                <ul class="footer-copyright-links d-flex align-items-center list-unstyled flex-wrap my-2">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="contact-us.html">Contact</a></li>
+                </ul>
+              </nav>
+            </div><!-- /.col-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-secondary -->
+    </footer>
+  </div>
+  <script src="assets/js/libraries.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

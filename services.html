@@ -39,10 +39,38 @@
                 <a href="index.html" class="nav-item-link">HOME</a>
               </li>
               <li class="nav-item">
-                <a href="about-us.html" class="nav-item-link">ABOUT US</a>
+                <a href="about-us.html#about" class="nav-item-link">ABOUT US</a>
               </li>
-              <li class="nav-item">
-                <a href="services.html" class="nav-item-link active">SERVICES</a>
+              <li class="nav-item has-dropdown">
+                <a href="company.html" class="dropdown-toggle nav-item-link">COMPANY</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a href="company.html#about" class="nav-item-link">ABOUT EBCORP</a></li>
+                  <li class="nav-item"><a href="company.html#experience" class="nav-item-link">PROJECT EXPERIENCE</a></li>
+                  <li class="nav-item"><a href="company.html#qualifications" class="nav-item-link">QUALIFICATIONS</a></li>
+                  <li class="nav-item"><a href="company.html#clients" class="nav-item-link">SELECTED CLIENTS</a></li>
+                </ul>
+              </li>
+              <li class="nav-item has-dropdown">
+                <a href="services.html" class="dropdown-toggle nav-item-link active">SERVICES</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a href="services.html#technical-consulting" class="nav-item-link">TECHNICAL CONSULTING</a></li>
+                  <li class="nav-item"><a href="services.html#grant-administration" class="nav-item-link">GRANT ADMINISTRATION</a></li>
+                  <li class="nav-item"><a href="services.html#project-appraisal" class="nav-item-link">CAPITAL PROJECTS APPRAISAL</a></li>
+                  <li class="nav-item"><a href="services.html#project-finance" class="nav-item-link">PROJECT FINANCE AND SYNDICATION</a></li>
+                  <li class="nav-item"><a href="services.html#bee-strategy" class="nav-item-link">BEE STRATEGY AND SME DEVELOPMENT</a></li>
+                  <li class="nav-item"><a href="services.html#enterprise-development" class="nav-item-link">ENTERPRISE AND SUPPLIER DEVELOPMENT</a></li>
+                </ul>
+              </li>
+              <li class="nav-item has-dropdown">
+                <a href="programme-experience.html" class="dropdown-toggle nav-item-link">PROGRAMME EXPERIENCE</a>
+                <ul class="dropdown-menu">
+                  <li class="nav-item"><a href="programme-experience.html#eip" class="nav-item-link">EIP</a></li>
+                  <li class="nav-item"><a href="programme-experience.html#apss" class="nav-item-link">APSS</a></li>
+                  <li class="nav-item"><a href="programme-experience.html#spp" class="nav-item-link">SPP</a></li>
+                  <li class="nav-item"><a href="programme-experience.html#isp" class="nav-item-link">ISP</a></li>
+                  <li class="nav-item"><a href="programme-experience.html#tsp" class="nav-item-link">TSP</a></li>
+                  <li class="nav-item"><a href="programme-experience.html#smedp" class="nav-item-link">SMEDP</a></li>
+                </ul>
               </li>
               <li class="nav-item">
                 <a href="https://www.ebcorp.co.za/TWR.html" class="nav-item-link">TWR</a>
@@ -99,7 +127,7 @@
                   <div class="service-item">
                     <div class="service-body">
                       <div class="service-icon"><i class="icon-money"></i></div>
-                      <h4 class="service-title">
+                      <h4 class="service-title" id="technical-consulting">
                         <a href="services.html#services">Technical Consulting Services</a>
                       </h4>
                       <p class="service-desc text-truncate-5">Technical consulting to support investment and development projects.</p>
@@ -127,7 +155,7 @@
                   <div class="service-item">
                     <div class="service-body">
                       <div class="service-icon"><i class="icon-diagnosis"></i></div>
-                      <h4 class="service-title">
+                      <h4 class="service-title" id="grant-administration">
                         <a href="services.html#services">Government Grant Administration</a>
                       </h4>
                       <p class="service-desc text-truncate-5">Administration, implementation and management of government grant programmes.</p>
@@ -155,7 +183,7 @@
                   <div class="service-item">
                     <div class="service-body">
                       <div class="service-icon"><i class="icon-layers"></i></div>
-                      <h4 class="service-title">
+                      <h4 class="service-title" id="project-appraisal">
                         <a href="services.html#services">Capital Projects Appraisal</a>
                       </h4>
                       <p class="service-desc text-truncate-5">Capital project appraisal and review, including due diligence and investment assessment.</p>
@@ -183,7 +211,7 @@
                   <div class="service-item">
                     <div class="service-body">
                       <div class="service-icon"><i class="icon-business-and-finance"></i></div>
-                      <h4 class="service-title">
+                      <h4 class="service-title" id="project-finance">
                         <a href="services.html#services">Project Finance and Syndication</a>
                       </h4>
                       <p class="service-desc text-truncate-5">Project finance and syndication involving private funders and government.</p>
@@ -211,7 +239,7 @@
                   <div class="service-item">
                     <div class="service-body">
                       <div class="service-icon"><i class="icon-room-service"></i></div>
-                      <h4 class="service-title">
+                      <h4 class="service-title" id="bee-strategy">
                         <a href="services.html#services">BEE Strategy and SME Development</a>
                       </h4>
                       <p class="service-desc text-truncate-5">BEE strategy advisory and small and medium enterprise development.</p>
@@ -239,7 +267,7 @@
                   <div class="service-item">
                     <div class="service-body">
                       <div class="service-icon"><i class="icon-battery"></i></div>
-                      <h4 class="service-title">
+                      <h4 class="service-title" id="enterprise-development">
                         <a href="services.html#services">Enterprise and Supplier Development</a>
                       </h4>
                       <p class="service-desc text-truncate-5">Enterprise and supplier development for measured entities, including implementation and grant management.</p>
@@ -489,7 +517,7 @@
       <div class="footer-primary">
         <div class="container">
           <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-4">
+            <div class="col-sm-12 col-md-12 col-lg-8">
               <div class="footer-widget-about">
                 <h6 class="footer-widget-title">For information about EBCorp's services and project experience, contact the team.</h6>
                 <a href="contact-us.html#contact" class="btn btn-white arrow-hover-flip-up">
@@ -510,67 +538,7 @@
                 </a>
               </div><!-- /.footer-widget-nav -->
             </div><!-- /.col-xl-2 -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-              <div class="footer-widget-nav">
-                <details class="footer-dropdown">
-                  <summary class="footer-widget-title">Company</summary>
-                  <nav>
-                    <ul class="footer-nav-list list-unstyled">
-                      <li><a href="about-us.html#about">About EBCorp</a></li>
-                      <li><a href="services.html#services">Services</a></li>
-                      <li><a href="about-us.html#experience">Project Experience</a></li>
-                      <li><a href="about-us.html#qualifications">Qualifications</a></li>
-                      <li><a href="about-us.html#clients">Selected Clients</a></li>
-                    </ul>
-                  </nav>
-                </details>
-              </div><!-- /.footer-widget-nav -->
-            </div><!-- /.col-lg-2 -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-              <div class="footer-widget-nav">
-                <details class="footer-dropdown">
-                  <summary class="footer-widget-title">Services</summary>
-                  <nav>
-                    <ul class="footer-nav-list list-unstyled">
-                      <li><a href="services.html#services">Technical Consulting</a></li>
-                      <li><a href="services.html#services">Grant Administration</a></li>
-                      <li><a href="services.html#services">Capital Projects Appraisal</a></li>
-                      <li><a href="services.html#services">Project Finance and Syndication</a></li>
-                      <li><a href="services.html#services">BEE Strategy and SME Development</a></li>
-                      <li><a href="services.html#services">Enterprise and Supplier Development</a></li>
-                    </ul>
-                  </nav>
-                </details>
-              </div><!-- /.footer-widget-nav -->
-            </div><!-- /.col-lg-2 -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-              <div class="footer-widget-nav">
-                <details class="footer-dropdown">
-                  <summary class="footer-widget-title">Programme Experience</summary>
-                  <nav>
-                    <ul class="footer-nav-list list-unstyled">
-                      <li><a href="about-us.html#experience">EIP</a></li>
-                      <li><a href="about-us.html#experience">APSS</a></li>
-                      <li><a href="about-us.html#experience">SPP</a></li>
-                      <li><a href="about-us.html#experience">ISP</a></li>
-                      <li><a href="about-us.html#experience">TSP</a></li>
-                      <li><a href="about-us.html#experience">SMEDP</a></li>
-                    </ul>
-                  </nav>
-                </details>
-              </div><!-- /.footer-widget-nav -->
-            </div><!-- /.col-lg-2 -->
-            <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-              <div class="footer-widget-nav">
-                <details class="footer-dropdown">
-                  <summary class="footer-widget-title">Quick Contacts</summary>
-                  <ul class="footer-nav-list contact-list list-unstyled">
-                    <li><a href="contact-us.html#contact">EBCorp contact details</a></li>
-                    <li><a href="contact-us.html#contact">2nd Floor, PPS Centurion Square, 1262 Heuwel Road, Centurion 0157</a></li>
-                  </ul>
-                </details>
-              </div><!-- /.footer-widget-contact -->
-            </div><!-- /.col-lg-2 -->
+
           </div><!-- /.row -->
         </div><!-- /.container -->
       </div><!-- /.footer-primary -->
