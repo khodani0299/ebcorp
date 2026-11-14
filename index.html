@@ -14,23 +14,399 @@
   <link rel="stylesheet" href="assets/css/icons.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <style>
-    .footer-dropdown > summary {
+    body {
+      background: #f5f5f1;
+      color: #2d2d2d;
+    }
+
+    .wrapper {
+      background: #f5f5f1;
+    }
+
+    .header-layout1 .navbar {
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(16, 37, 29, 0.08);
+      margin-bottom: 0;
+    }
+
+    .header-layout1 {
+      margin-bottom: 0;
+    }
+
+    .hero-modern {
+      margin-top: 0;
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+    }
+
+    .hero-slider {
+      margin-top: 0;
+    }
+
+    .header-layout1 .navbar.is-sticky {
+      background: rgba(255,255,255,0.98);
+      box-shadow: 0 12px 30px rgba(14, 31, 24, 0.08);
+    }
+
+    .navbar .nav-item .nav-item-link {
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 12px;
+      color: #1d2a27;
+    }
+
+    .navbar .nav-item .nav-item-link.active,
+    .navbar .nav-item .nav-item-link:hover {
+      color: var(--color-primary);
+    }
+
+    .hero-modern {
+      position: relative;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero-slider {
+      min-height: 100vh;
+    }
+
+    .hero-slide {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .hero-slide::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(10,22,18,0.64), rgba(10,22,18,0.42));
+    }
+
+    .hero-slide[data-image="1"] {
+      background-image: url('assets/images/ebcorp/advisory-consultation.jpg');
+    }
+
+    .hero-slide[data-image="2"] {
+      background-image: url('assets/images/d25737ce5b70144d194cd99c49df3df4.jpg');
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(260px, 0.7fr);
+      gap: 36px;
+      align-items: end;
+      padding-top: 90px;
+      padding-bottom: 80px;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      color: #fff;
+    }
+
+    .hero-copy .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 8px 16px;
+      border: 1px solid rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.9);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .hero-copy h1 {
+      margin: 0;
+      font-family: var(--font-secondary);
+      font-size: clamp(2.8rem, 5vw, 5rem);
+      line-height: 1.02;
+      letter-spacing: -0.06em;
+      color: #fff;
+      max-width: 760px;
+    }
+
+    .hero-copy p {
+      font-size: 1.08rem;
+      color: rgba(255,255,255,0.82);
+      max-width: 600px;
+      margin: 22px 0 0;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .hero-actions .btn {
+      min-height: 52px;
+      padding-inline: 22px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .hero-panel {
+      justify-self: end;
+      width: min(100%, 385px);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(8px);
+      padding: 26px 22px;
+    }
+
+    .hero-panel .panel-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.15);
+      padding: 20px 18px;
+      color: rgba(255,255,255,0.9);
+    }
+
+    .hero-panel .panel-head {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 12px;
-      cursor: pointer;
-      list-style: none;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 18px;
     }
 
-    .footer-dropdown > summary::-webkit-details-marker { display: none; }
-    .footer-dropdown > summary::after {
-      content: "+";
+    .hero-panel .panel-stat {
+      font-family: var(--font-secondary);
+      font-size: 2.1rem;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .hero-panel .panel-text {
+      font-size: 0.95rem;
+      color: rgba(255,255,255,0.8);
+      margin: 0;
+    }
+
+    .site-section {
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin: 0 0 16px;
       color: var(--color-primary);
-      font-size: 22px;
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .section-header {
+      margin-bottom: 38px;
+    }
+
+    .section-header h2 {
+      margin: 0;
+      font-family: var(--font-secondary);
+      color: #1c2b28;
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -0.05em;
+    }
+
+    .section-header p {
+      margin: 16px 0 0;
+      max-width: 680px;
+      font-size: 1.05rem;
+      color: #4f5951;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+    }
+
+    .service-card {
+      display: block;
+      height: 100%;
+      background: #fff;
+      border: 1px solid rgba(18, 40, 30, 0.08);
+      border-radius: 18px;
+      padding: 28px 24px 24px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      box-shadow: 0 10px 26px rgba(17, 29, 22, 0.04);
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(26, 126, 0, 0.28);
+      box-shadow: 0 20px 38px rgba(17, 29, 22, 0.08);
+    }
+
+    .service-card .icon-wrap {
+      width: 64px;
+      height: 64px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(26, 126, 0, 0.08);
+      color: var(--color-primary);
+      margin-bottom: 22px;
+      font-size: 1.7rem;
+    }
+
+    .service-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.38rem;
+      line-height: 1.25;
+      color: #1a2926;
+      font-family: var(--font-secondary);
+    }
+
+    .service-card p {
+      margin: 0 0 18px;
+      color: #56635d;
+      line-height: 1.7;
+    }
+
+    .service-card .read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--color-primary);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 11px;
+    }
+
+    .service-card .read-more::after {
+      content: "→";
+      font-size: 16px;
       line-height: 1;
     }
-    .footer-dropdown[open] > summary::after { content: "-"; }
+
+    .client-band {
+      background: #edf2ee;
+      border-top: 1px solid rgba(17, 31, 27, 0.06);
+      border-bottom: 1px solid rgba(17, 31, 27, 0.06);
+    }
+
+    .logo-marquee {
+      overflow: hidden;
+    }
+
+    .logo-marquee .swiper-wrapper {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo-marquee .swiper-slide {
+      width: auto !important;
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      min-width: 150px;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .logo-grid img {
+      display: block;
+      margin: 0 auto;
+      max-height: 62px;
+      width: auto;
+      max-width: 170px;
+      filter: none;
+      opacity: 1;
+    }
+
+    .client {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 90px;
+      opacity: 1;
+      visibility: visible;
+      width: auto;
+    }
+
+    .client img {
+      display: block;
+      max-height: 62px;
+      width: auto;
+      max-width: 170px;
+      object-fit: contain;
+      filter: none;
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .swiper-slide {
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+
+    .footer-primary {
+      background: #0f1f1a;
+      color: rgba(255,255,255,0.8);
+    }
+
+    .footer-widget-about h6 {
+      color: #fff;
+      font-size: clamp(1.5rem, 2vw, 2.1rem);
+      line-height: 1.35;
+      margin-bottom: 22px;
+      font-family: var(--font-secondary);
+      letter-spacing: -0.04em;
+    }
+
+    .footer-secondary {
+      background: #0b1714;
+    }
+
+    @media (max-width: 991px) {
+      .hero-modern {
+        min-height: 640px;
+      }
+
+      .hero-slider,
+      .hero-slide {
+        min-height: 640px;
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        padding-top: 110px;
+      }
+
+      .hero-panel {
+        justify-self: start;
+      }
+
+      .service-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .logo-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
 
     @media (max-width: 767.98px) {
       .header-layout1 .navbar {
@@ -42,37 +418,18 @@
         height: auto;
       }
 
-      .slider .slide-item {
-        min-height: 100svh;
-        padding: 110px 0 48px;
+      .hero-copy h1 {
+        font-size: clamp(2.3rem, 12vw, 3.4rem);
       }
 
-      .slider .slide-content {
-        max-width: 100%;
+      .site-section {
+        padding-top: 80px;
+        padding-bottom: 80px;
       }
 
-      .slider .hero-title {
-        font-size: clamp(2rem, 9vw, 3.25rem);
-        line-height: 1.12;
-        overflow-wrap: anywhere;
-      }
-
-      .slider .hero-subtitle {
-        font-size: clamp(.9rem, 4vw, 1.1rem);
-      }
-
-      .footer-primary .row > [class*="col-"] {
-        margin-bottom: 28px;
-      }
-
-      .footer-secondary .contact-text-title {
-        font-size: clamp(2rem, 11vw, 4rem);
-      }
-
-      .footer-secondary .contatct-text .arrow-flip {
-        width: 48px;
-        height: 48px;
-        flex: 0 0 auto;
+      .service-grid,
+      .logo-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -83,9 +440,6 @@
       <div class="loading"><span></span><span></span><span></span><span></span></div>
     </div><!-- /.preloader -->
 
-    <!-- =========================
-        Header
-    =========================== -->
     <header class="header header-layout1">
       <nav class="navbar navbar-expand-lg sticky-navbar">
         <div class="container-fluid">
@@ -116,12 +470,11 @@
               <li class="nav-item has-dropdown">
                 <a href="services.html" class="dropdown-toggle nav-item-link">SERVICES</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a href="services.html#technical-consulting" class="nav-item-link">TECHNICAL CONSULTING</a></li>
-                  <li class="nav-item"><a href="services.html#grant-administration" class="nav-item-link">GRANT ADMINISTRATION</a></li>
-                  <li class="nav-item"><a href="services.html#project-appraisal" class="nav-item-link">CAPITAL PROJECTS APPRAISAL</a></li>
-                  <li class="nav-item"><a href="services.html#project-finance" class="nav-item-link">PROJECT FINANCE AND SYNDICATION</a></li>
-                  <li class="nav-item"><a href="services.html#bee-strategy" class="nav-item-link">BEE STRATEGY AND SME DEVELOPMENT</a></li>
-                  <li class="nav-item"><a href="services.html#enterprise-development" class="nav-item-link">ENTERPRISE AND SUPPLIER DEVELOPMENT</a></li>
+                  <li class="nav-item"><a href="services.html#government-grant-administration" class="nav-item-link">GRANT ADMINISTRATION</a></li>
+                  <li class="nav-item"><a href="services.html#transaction-advisory" class="nav-item-link">TRANSACTION ADVISORY</a></li>
+                  <li class="nav-item"><a href="services.html#capital-projects-appraisal" class="nav-item-link">CAPITAL PROJECTS APPRAISAL</a></li>
+                  <li class="nav-item"><a href="services.html#project-finance" class="nav-item-link">PROJECT FINANCE</a></li>
+                  <li class="nav-item"><a href="services.html#enterprise-development" class="nav-item-link">ENTERPRISE DEVELOPMENT</a></li>
                 </ul>
               </li>
               <li class="nav-item has-dropdown">
@@ -150,162 +503,140 @@
       </nav><!-- /.navabr -->
     </header>
 
-<section class="slider py-0">
-      <div class="swiper swiper-controls-light p-0 m-0"
-        data-swiper='{"slidesPerView":1,"spaceBetween":0,"autoplay":{"delay":10000}, "loop":true,"speed":1000, "navigation":{"nextEl":".slider-prev","prevEl":".slider-next"} }'>
+    <section class="hero-modern">
+      <div class="swiper hero-slider" data-swiper='{"slidesPerView":1,"spaceBetween":0,"autoplay":{"delay":5000},"loop":true,"speed":1200}'>
         <div class="swiper-wrapper">
-          <div class="swiper-slide slide-item bg-overlay align-v-h">
-            <div class="bg-img"><img src="assets/images/ebcorp/advisory-consultation.jpg" alt="Business professionals discussing a project"></div>
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
-                  <div class="slide-content">
-                    <span class="hero-subtitle">We are a transaction advisory firm</span>
-                    <h1 class="hero-title mb-0">Eagles &amp; Butterflies Corporation</h1>
-                    <a href="contact-us.html#contact" class="arrow-btn animated-arrow-hover transition-linear-3">
-                      <svg class="animated-arrow" xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                        viewBox="0 0 101.7 101.7">
-                        <g fill="none" stroke="currentColor" stroke-width="6">
-                          <path d="m.7 101 100-100" stroke-linejoin="round"></path>
-                          <path d="M.7 1h100" stroke-width="9" stroke-linejoin="round"></path>
-                          <path d="M100.7 1v100" stroke-width="9" stroke-linejoin="round"></path>
-                        </g>
-                      </svg>
-                    </a>
-                    <div class="slider-control d-none d-xxl-block">
-                      <h3 class="slider-control-title">We give you a lift</h3>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <p class="slider-control-bio mb-0">Bespoke transaction advisory services covering all sectors of the economy.</p>
-                        <div class="d-flex">
-                          <div class="slider-next swiper-button-prev-2 icon-arrow-left position-static"></div>
-                          <div class="slider-prev swiper-button-next-2 icon-arrow-right position-static"></div>
-                        </div>
-                      </div>
-                    </div><!-- /.slider-control -->
-                  </div><!-- /.slide-content -->
-                </div><!-- /.col-xl-7 -->
-              </div><!-- /.row -->
-            </div><!-- /.container -->
-          </div><!-- /.slide-item -->
-          <div class="swiper-slide slide-item bg-overlay align-v-h">
-            <div class="bg-img"><img src="assets/images/sliders/d25737ce5b70144d194cd99c49df3df4.jpg" alt="Executive boardroom ready for a meeting"></div>
-            <div class="container">
-              <div class="row align-items-center">
-                <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
-                  <div class="slide-content">
-                    <span class="hero-subtitle">Development and transaction advisory services</span>
-                    <h2 class="hero-title mb-0">We give your projects a lift.</h2>
-                    <a href="contact-us.html#contact" class="arrow-btn animated-arrow-hover transition-linear-3">
-                      <svg class="animated-arrow" xmlns="http://www.w3.org/2000/svg" width="36" height="36"
-                        viewBox="0 0 101.7 101.7">
-                        <g fill="none" stroke="currentColor" stroke-width="6">
-                          <path d="m.7 101 100-100" stroke-linejoin="round"></path>
-                          <path d="M.7 1h100" stroke-width="9" stroke-linejoin="round"></path>
-                          <path d="M100.7 1v100" stroke-width="9" stroke-linejoin="round"></path>
-                        </g>
-                      </svg>
-                    </a>
-                    <div class="slider-control d-none d-xxl-block">
-                      <h3 class="slider-control-title">Eagles &amp; Butterflies Corporation</h3>
-                      <div class="d-flex justify-content-between align-items-center">
-                        <p class="slider-control-bio mb-0">Supporting projects from pre-screening and appraisal through to disbursement and closure.</p>
-                        <div class="d-flex">
-                          <div class="slider-next swiper-button-prev-2 icon-arrow-left position-static"></div>
-                          <div class="slider-prev swiper-button-next-2 icon-arrow-right position-static"></div>
-                        </div>
-                      </div>
-                    </div><!-- /.slider-control -->
-                  </div><!-- /.slide-content -->
-                </div><!-- /.col-xl-7 -->
-              </div><!-- /.row -->
-            </div><!-- /.container -->
-          </div><!-- /.slide-item -->
-        </div><!-- /.swiper-wrapper -->
-      </div><!-- /.swiper -->
+          <div class="swiper-slide hero-slide" data-image="1">
+            <div class="container hero-inner">
+              <div class="hero-copy">
+                <span class="eyebrow">Transaction advisory &amp; development</span>
+                <h1>Eagles &amp; Butterflies Corporation</h1>
+                <p>We support large businesses, funders and public-sector stakeholders with strategic advisory, grants administration, and capital mobilisation that unlocks credible growth.</p>
+                <div class="hero-actions">
+                  <a href="contact-us.html#contact" class="btn btn-primary same-hover arrow-hover-flip-up">
+                    <span>Request a consultation</span>
+                  </a>
+                  <a href="services.html" class="btn btn-outline-light">Explore services</a>
+                </div>
+              </div>
+
+              <aside class="hero-panel">
+                <div class="panel-card">
+                  <div class="panel-head">
+                    <span>Funding readiness</span>
+                    <span>2026</span>
+                  </div>
+                  <div class="panel-stat">3 core paths</div>
+                  <p class="panel-text">Grant administration, transaction advisory and capital project appraisal designed for complex, investor-backed growth.</p>
+                </div>
+              </aside>
+            </div>
+          </div>
+
+          <div class="swiper-slide hero-slide" data-image="2">
+            <div class="container hero-inner">
+              <div class="hero-copy">
+                <span class="eyebrow">Capital, projects &amp; funding</span>
+                <h1>Turning strategic intent into investable outcomes.</h1>
+                <p>We help organisations shape credible project pipelines, strengthen investment readiness and deliver structured support across government, private capital and institutional stakeholders.</p>
+                <div class="hero-actions">
+                  <a href="contact-us.html#contact" class="btn btn-primary same-hover arrow-hover-flip-up">
+                    <span>Request a consultation</span>
+                  </a>
+                  <a href="services.html" class="btn btn-outline-light">Explore services</a>
+                </div>
+              </div>
+
+              <aside class="hero-panel">
+                <div class="panel-card">
+                  <div class="panel-head">
+                    <span>Project delivery</span>
+                    <span>From concept</span>
+                  </div>
+                  <div class="panel-stat">From concept to close</div>
+                  <p class="panel-text">Structured support across advisory, project appraisal and transaction execution to secure credible funding pathways.</p>
+                </div>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <header class="header header-layout1">
-      <nav class="navbar navbar-expand-lg sticky-navbar">
-        <div class="container-fluid">
+    <section class="site-section client-band">
+      <div class="container">
+        <div class="swiper logo-marquee" data-swiper='{"slidesPerView":2,"spaceBetween":20,"autoplay":{"delay":2200},"loop":true,"speed":800,"breakpoints":{"400":{"slidesPerView":3},"550":{"slidesPerView":4},"992":{"slidesPerView":5},"1200":{"slidesPerView":6}}}'>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide client">
+              <img src="assets/images/drdlr-layer-402x157.png" alt="Department of Rural Development and Land Reform" loading="lazy">
+            </div>
+            <div class="swiper-slide client">
+              <img src="assets/images/idc-logo-400-401x156.png" alt="Industrial Development Corporation (IDC)" loading="lazy">
+            </div>
+            <div class="swiper-slide client">
+              <img src="assets/images/yawee-logo-2-400x156.png" alt="Yawee" loading="lazy">
+            </div>
+            <div class="swiper-slide client">
+              <img src="assets/images/untitled-4-402x157.jpg" alt="Pension Funds Adjudicator (PFA)" loading="lazy">
+            </div>
+            <div class="swiper-slide client">
+              <img src="assets/images/competition-tribunal-logo-401x156.jpg" alt="Competition Tribunal South Africa" loading="lazy">
+            </div>
+            <div class="swiper-slide client">
+              <img src="assets/images/fasset.png" alt="Fasset" loading="lazy">
+            </div>
+            <div class="swiper-slide client">
+              <img src="assets/images/durafoam.png" alt="Durafoam Distributors" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <button class="navbar-toggler" type="button">
-            <span class="menu-lines"><span></span></span>
-          </button>
-          <div class="swiper"
-               data-swiper='{"slidesPerView":2,"spaceBetween":20,"autoplay":{"delay":"6000"}, "loop":true,"breakpoints":{"400":{"slidesPerView":3},"550":{"slidesPerView":4}, "992":{"slidesPerView":5},"1200":{"slidesPerView":6}} }'>
-            <div class="swiper-wrapper">
-              <div class="swiper-slide client">
-                <img src="assets/images/drdlr-layer-402x157.png" alt="Department of Rural Development and Land Reform" loading="lazy">
-              </div><!-- /.client -->
-              <div class="swiper-slide client">
-                <img src="assets/images/idc-logo-400-401x156.png" alt="Industrial Development Corporation (IDC)" loading="lazy">
-              </div><!-- /.client -->
-              <div class="swiper-slide client">
-                <img src="assets/images/yawee-logo-2-400x156.png" alt="Yawee" loading="lazy">
-              </div><!-- /.client -->
-              <div class="swiper-slide client">
-                <img src="assets/images/untitled-4-402x157.jpg" alt="Pension Funds Adjudicator (PFA)" loading="lazy">
-              </div><!-- /.client -->
-              <div class="swiper-slide client">
-                <img src="assets/images/competition-tribunal-logo-401x156.jpg" alt="Competition Tribunal South Africa" loading="lazy">
-              </div><!-- /.client -->
-              <div class="swiper-slide client">
-                <img src="assets/images/fasset.png" alt="ShelveCraft" loading="lazy">
-              </div><!-- /.client -->
-              <div class="swiper-slide client">
-                <img src="assets/images/durafoam.png" alt="Durafoam Distributors" loading="lazy">
-              </div><!-- /.client -->
-            </div><!-- /.swiper-rapper -->
+    <section class="site-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">Core services</span>
+          <h2>Built for serious projects and serious capital.</h2>
+          <p>We work with organisations that need disciplined advisory, credible execution and investor confidence from concept to close.</p>
+        </div>
 
-            </ul><!-- /.navbar-nav -->
-            <button class="close-mobile-menu d-flex justify-content-center align-items-center d-lg-none">
-              <i class="icon-close"></i>
-            </button>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container -->
-      </nav><!-- /.navabr -->
-    </header>
+        <div class="service-grid">
+          <a href="services.html#government-grant-administration" class="service-card">
+            <div class="icon-wrap"><i class="icon-diagnosis"></i></div>
+            <h3>Government Grant administration, implementation and management</h3>
+            <p>End-to-end grant administration, implementation support and programme oversight for public and private sector initiatives.</p>
+            <span class="read-more">Learn more</span>
+          </a>
 
-<footer class="footer">
-      <div class="footer-primary">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-8">
-              <div class="footer-widget-about">
-                <h6 class="footer-widget-title">For information about EBCorp's services and project experience, contact the team.</h6>
-                <a href="contact-us.html#contact" class="btn btn-white arrow-hover-flip-up">
-                  <span>Contact EBCorp</span>
-                  <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="12" height="12"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g class="arrow-flip-path-1">
-                      <path
-                        d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                        fill="currentColor"></path>
-                    </g>
-                    <g class="arrow-flip-path-2">
-                      <path
-                        d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                        fill="currentColor"></path>
-                    </g>
-                  </svg>
-                </a>
-              </div><!-- /.footer-widget-nav -->
-            </div><!-- /.col-xl-2 -->
+          <a href="services.html#transaction-advisory" class="service-card">
+            <div class="icon-wrap"><i class="icon-money"></i></div>
+            <h3>Transaction advisory - (Financial, legal, technical and B-BBEE)</h3>
+            <p>Integrated transaction support covering financial structuring, legal diligence, technical review and B-BBEE alignment.</p>
+            <span class="read-more">Learn more</span>
+          </a>
 
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-      </div><!-- /.footer-primary -->
+          <a href="services.html#capital-projects-appraisal" class="service-card">
+            <div class="icon-wrap"><i class="icon-layers"></i></div>
+            <h3>Capital Projects Appraisal</h3>
+            <p>Commercial and technical project appraisal that helps investors and stakeholders make confident funding decisions.</p>
+            <span class="read-more">Learn more</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+
       <div class="footer-secondary">
         <div class="container">
           <div class="row align-items-center">
             <div class="col-12">
-              <a href="contact-us.html#contact"
-                class="contatct-text d-flex justify-content-between arrow-hover-flip-up">
-              </a>
-            </div><!-- /.col-12 -->
+              <a href="contact-us.html#contact" class="contatct-text d-flex justify-content-between arrow-hover-flip-up"></a>
+            </div>
             <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
               <div class="footer-copyrights my-2">
-                <span class="fz-14">&copy;2026 | Eagles & Butterflies Corporation - All Rights Reserved.</span>
+                <span class="fz-14">&copy;2026 | Eagles &amp; Butterflies Corporation - All Rights Reserved.</span>
               </div>
               <nav>
                 <ul class="footer-copyright-links d-flex align-items-center list-unstyled flex-wrap my-2">
@@ -314,15 +645,15 @@
                   <li><a href="contact-us.html">Contact</a></li>
                 </ul>
               </nav>
-            </div><!-- /.col-12 -->
-          </div><!-- /.row -->
-        </div><!-- /.container -->
-      </div><!-- /.footer-secondary -->
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
-  </div><!-- /.wrapper -->
+  </div>
 
   <script src="assets/js/libraries.js"></script>
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

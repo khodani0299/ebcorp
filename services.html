@@ -13,7 +13,205 @@
   <link rel="stylesheet" href="assets/css/libraries.css">
   <link rel="stylesheet" href="assets/css/icons.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <style>
+    body {
+      background: #f4f4ef;
+      color: #2c2c2c;
+    }
+
+    .page-title-layout5 {
+      min-height: 340px;
+      background: linear-gradient(90deg, rgba(11, 20, 18, 0.74), rgba(11, 20, 18, 0.35)), url('assets/images/ebcorp/skyscrapers_high_quality.jpg') center/cover no-repeat;
+    }
+
+    .page-title-layout5 .pagetitle-heading {
+      font-family: var(--font-secondary);
+      font-size: clamp(2.5rem, 4vw, 4rem);
+      letter-spacing: -0.06em;
+      color: #fff;
+    }
+
+    .page-title-layout5 .pagetitle-desc {
+      color: rgba(255,255,255,0.82);
+      max-width: 660px;
+      font-size: 1.06rem;
+    }
+
+    .services-overview {
+      padding-top: 110px;
+      padding-bottom: 92px;
+    }
+
+    .services-overview .intro-head {
+      margin-bottom: 34px;
+    }
+
+    .services-overview .intro-head h2 {
+      margin: 0;
+      font-family: var(--font-secondary);
+      font-size: clamp(2rem, 3vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.05em;
+      color: #182622;
+    }
+
+    .services-overview .intro-head p {
+      max-width: 760px;
+      margin-top: 18px;
+      color: #4a5651;
+      font-size: 1.04rem;
+      line-height: 1.7;
+    }
+
+    .service-list-compact {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+      margin-top: 36px;
+    }
+
+    .service-list-compact .service-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      height: 100%;
+      background: #fff;
+      border: 1px solid rgba(20, 35, 31, 0.08);
+      border-radius: 18px;
+      padding: 26px 22px;
+      box-shadow: 0 16px 34px rgba(13, 22, 17, 0.04);
+    }
+
+    .service-list-compact .service-panel .index-tag {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: rgba(26,126,0,0.09);
+      color: var(--color-primary);
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .service-list-compact .service-panel h3 {
+      margin: 0;
+      font-family: var(--font-secondary);
+      font-size: 1.4rem;
+      line-height: 1.25;
+      color: #182622;
+    }
+
+    .service-list-compact .service-panel p {
+      margin: 0;
+      color: #56615d;
+      line-height: 1.75;
+    }
+
+    .service-detail {
+      background: #edf1ee;
+      padding-top: 110px;
+      padding-bottom: 110px;
+    }
+
+    .service-detail .detail-wrap {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      align-items: stretch;
+    }
+
+    .detail-image {
+      min-height: 420px;
+      border-radius: 26px;
+      overflow: hidden;
+      background: url('assets/images/ebcorp/business_boardroom_high_quality.jpg') center/cover no-repeat;
+      box-shadow: 0 18px 34px rgba(11, 22, 18, 0.08);
+    }
+
+    .detail-copy {
+      background: #fff;
+      border: 1px solid rgba(20, 35, 31, 0.08);
+      border-radius: 24px;
+      padding: 36px 32px;
+      box-shadow: 0 18px 34px rgba(11, 22, 18, 0.04);
+    }
+
+    .detail-copy .section-kicker {
+      margin-bottom: 12px;
+    }
+
+    .detail-copy h2 {
+      margin: 0 0 18px;
+      font-family: var(--font-secondary);
+      font-size: clamp(2rem, 2.6vw, 3rem);
+      line-height: 1.08;
+      letter-spacing: -0.05em;
+      color: #182622;
+    }
+
+    .detail-copy p {
+      color: #4f5854;
+      line-height: 1.8;
+      margin-bottom: 0;
+    }
+
+    .detail-copy ul {
+      list-style: none;
+      margin: 22px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .detail-copy li {
+      position: relative;
+      padding-left: 22px;
+      color: #2d3634;
+      line-height: 1.7;
+    }
+
+    .detail-copy li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--color-primary);
+      font-size: 1.2rem;
+    }
+
+    .cta-band {
+      padding-top: 30px;
+      padding-bottom: 90px;
+      background: #f4f4ef;
+    }
+
+    @media (max-width: 991px) {
+      .service-list-compact,
+      .service-detail .detail-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .services-overview,
+      .service-detail {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+
+      .service-list-compact {
+        grid-template-columns: 1fr;
+      }
+
+      .detail-image {
+        min-height: 300px;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <div class="wrapper">
     <div class="preloader">
@@ -35,12 +233,8 @@
           </button>
           <div class="collapse navbar-collapse" id="mainNavigation">
             <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a href="index.html" class="nav-item-link">HOME</a>
-              </li>
-              <li class="nav-item">
-                <a href="about-us.html#about" class="nav-item-link">ABOUT US</a>
-              </li>
+              <li class="nav-item"><a href="index.html" class="nav-item-link">HOME</a></li>
+              <li class="nav-item"><a href="about-us.html#about" class="nav-item-link">ABOUT US</a></li>
               <li class="nav-item has-dropdown">
                 <a href="company.html" class="dropdown-toggle nav-item-link">COMPANY</a>
                 <ul class="dropdown-menu">
@@ -53,12 +247,11 @@
               <li class="nav-item has-dropdown">
                 <a href="services.html" class="dropdown-toggle nav-item-link active">SERVICES</a>
                 <ul class="dropdown-menu">
-                  <li class="nav-item"><a href="services.html#technical-consulting" class="nav-item-link">TECHNICAL CONSULTING</a></li>
-                  <li class="nav-item"><a href="services.html#grant-administration" class="nav-item-link">GRANT ADMINISTRATION</a></li>
-                  <li class="nav-item"><a href="services.html#project-appraisal" class="nav-item-link">CAPITAL PROJECTS APPRAISAL</a></li>
-                  <li class="nav-item"><a href="services.html#project-finance" class="nav-item-link">PROJECT FINANCE AND SYNDICATION</a></li>
-                  <li class="nav-item"><a href="services.html#bee-strategy" class="nav-item-link">BEE STRATEGY AND SME DEVELOPMENT</a></li>
-                  <li class="nav-item"><a href="services.html#enterprise-development" class="nav-item-link">ENTERPRISE AND SUPPLIER DEVELOPMENT</a></li>
+                  <li class="nav-item"><a href="#government-grant-administration" class="nav-item-link">GRANT ADMINISTRATION</a></li>
+                  <li class="nav-item"><a href="#transaction-advisory" class="nav-item-link">TRANSACTION ADVISORY</a></li>
+                  <li class="nav-item"><a href="#capital-projects-appraisal" class="nav-item-link">CAPITAL PROJECTS APPRAISAL</a></li>
+                  <li class="nav-item"><a href="#project-finance" class="nav-item-link">PROJECT FINANCE</a></li>
+                  <li class="nav-item"><a href="#enterprise-development" class="nav-item-link">ENTERPRISE DEVELOPMENT</a></li>
                 </ul>
               </li>
               <li class="nav-item has-dropdown">
@@ -72,12 +265,8 @@
                   <li class="nav-item"><a href="programme-experience.html#smedp" class="nav-item-link">SMEDP</a></li>
                 </ul>
               </li>
-              <li class="nav-item">
-                <a href="https://www.ebcorp.co.za/TWR.html" class="nav-item-link">TWR</a>
-              </li>
-              <li class="nav-item">
-                <a href="contact-us.html" class="nav-item-link">CONTACT</a>
-              </li>
+              <li class="nav-item"><a href="https://www.ebcorp.co.za/TWR.html" class="nav-item-link">TWR</a></li>
+              <li class="nav-item"><a href="contact-us.html" class="nav-item-link">CONTACT</a></li>
             </ul><!-- /.navbar-nav -->
             <button class="close-mobile-menu d-flex justify-content-center align-items-center d-lg-none">
               <i class="icon-close"></i>
@@ -87,430 +276,72 @@
       </nav><!-- /.navabr -->
     </header>
 
-<section class="page-title-layout5 page-title-light bg-parallax bg-overlay">
-      <div class="bg-img"><img src="assets/images/ebcorp/skyscrapers_high_quality.jpg" alt="EBCorp team collaborating on a project"></div>
+    <section class="page-title-layout5 page-title-light bg-parallax bg-overlay">
       <div class="container">
         <div class="row">
           <div class="col-sm-12 col-md-12 col-lg-8 offset-lg-2 text-center">
             <h1 class="pagetitle-heading">Our Services</h1>
-            <p class="pagetitle-desc mx-auto">Development and transaction advisory support from project assessment through implementation.</p>
+            <p class="pagetitle-desc mx-auto">Bespoke advisory support for businesses, investors and public-sector programmes from early screening through to execution and closure.</p>
           </div>
         </div>
       </div>
     </section>
 
-<section class="services-layout6 overflow-x-hidden section-slider-stretched" id="services">
+    <section class="services-overview">
       <div class="container">
-        <div class="heading-layout2 mb-60">
-          <div class="row">
-            <div class="col-12">
-              <h2 class="heading-subtitle">Transaction advisory for projects across all sectors.</h2>
-            </div><!-- /.col-lg-6 -->
-          </div><!-- /.row -->
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <h3 class="heading-title">Bespoke development and transaction advisory.</h3>
-            </div><!-- /.col-lg-6 -->
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <p class="heading-desc fw-bold color-secondary mb-20">EBCorp supports projects from early assessment through appraisal, finance and implementation, with public and private sector experience.</p>
-              <p class="heading-desc">Additional services include coaching and mentorship, BEE strategy advisory, SME development and enterprise and supplier development.</p>
-            </div><!-- /.col-lg-6 -->
-          </div><!-- /.row -->
-        </div><!-- /.heading -->
-        <div class="row">
-          <div class="col-12">
-            <div class="swiper"
-              data-swiper='{"slidesPerView":1,"spaceBetween":15,"autoplay":{"delay":"6000"}, "watchSlidesProgress": true, "loop":true,"breakpoints":{"600":{"slidesPerView":2},"992":{"slidesPerView":3},"1200":{"slidesPerView":4}}}'>
-              <div class="swiper-wrapper">
-                <!-- service item #1 -->
-                <div class="swiper-slide">
-                  <div class="service-item">
-                    <div class="service-body">
-                      <div class="service-icon"><i class="icon-money"></i></div>
-                      <h4 class="service-title" id="technical-consulting">
-                        <a href="services.html#services">Technical Consulting Services</a>
-                      </h4>
-                      <p class="service-desc text-truncate-5">Technical consulting to support investment and development projects.</p>
-                      <a href="services.html#services" class="btn btn-primary btn-link same-hover arrow-hover-flip-up">
-                        <span>Read More</span>
-                        <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10"
-                          height="10" xmlns="http://www.w3.org/2000/svg">
-                          <g class="arrow-flip-path-1">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                          <g class="arrow-flip-path-2">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                        </svg>
-                      </a>
-                    </div><!-- /.service-body -->
-                  </div><!-- /.service-item -->
-                </div>
-                <!-- service item #2 -->
-                <div class="swiper-slide">
-                  <div class="service-item">
-                    <div class="service-body">
-                      <div class="service-icon"><i class="icon-diagnosis"></i></div>
-                      <h4 class="service-title" id="grant-administration">
-                        <a href="services.html#services">Government Grant Administration</a>
-                      </h4>
-                      <p class="service-desc text-truncate-5">Administration, implementation and management of government grant programmes.</p>
-                      <a href="services.html#services" class="btn btn-primary btn-link same-hover arrow-hover-flip-up">
-                        <span>Read More</span>
-                        <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10"
-                          height="10" xmlns="http://www.w3.org/2000/svg">
-                          <g class="arrow-flip-path-1">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                          <g class="arrow-flip-path-2">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                        </svg>
-                      </a>
-                    </div><!-- /.service-body -->
-                  </div><!-- /.service-item -->
-                </div>
-                <!-- service item #3 -->
-                <div class="swiper-slide">
-                  <div class="service-item">
-                    <div class="service-body">
-                      <div class="service-icon"><i class="icon-layers"></i></div>
-                      <h4 class="service-title" id="project-appraisal">
-                        <a href="services.html#services">Capital Projects Appraisal</a>
-                      </h4>
-                      <p class="service-desc text-truncate-5">Capital project appraisal and review, including due diligence and investment assessment.</p>
-                      <a href="services.html#services" class="btn btn-primary btn-link same-hover arrow-hover-flip-up">
-                        <span>Read More</span>
-                        <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10"
-                          height="10" xmlns="http://www.w3.org/2000/svg">
-                          <g class="arrow-flip-path-1">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                          <g class="arrow-flip-path-2">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                        </svg>
-                      </a>
-                    </div><!-- /.service-body -->
-                  </div><!-- /.service-item -->
-                </div>
-                <!-- service item #4 -->
-                <div class="swiper-slide">
-                  <div class="service-item">
-                    <div class="service-body">
-                      <div class="service-icon"><i class="icon-business-and-finance"></i></div>
-                      <h4 class="service-title" id="project-finance">
-                        <a href="services.html#services">Project Finance and Syndication</a>
-                      </h4>
-                      <p class="service-desc text-truncate-5">Project finance and syndication involving private funders and government.</p>
-                      <a href="services.html#services" class="btn btn-primary btn-link same-hover arrow-hover-flip-up">
-                        <span>Read More</span>
-                        <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10"
-                          height="10" xmlns="http://www.w3.org/2000/svg">
-                          <g class="arrow-flip-path-1">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                          <g class="arrow-flip-path-2">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                        </svg>
-                      </a>
-                    </div><!-- /.service-body -->
-                  </div><!-- /.service-item -->
-                </div>
-                <!-- service item #5 -->
-                <div class="swiper-slide">
-                  <div class="service-item">
-                    <div class="service-body">
-                      <div class="service-icon"><i class="icon-room-service"></i></div>
-                      <h4 class="service-title" id="bee-strategy">
-                        <a href="services.html#services">BEE Strategy and SME Development</a>
-                      </h4>
-                      <p class="service-desc text-truncate-5">BEE strategy advisory and small and medium enterprise development.</p>
-                      <a href="services.html#services" class="btn btn-primary btn-link same-hover arrow-hover-flip-up">
-                        <span>Read More</span>
-                        <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10"
-                          height="10" xmlns="http://www.w3.org/2000/svg">
-                          <g class="arrow-flip-path-1">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                          <g class="arrow-flip-path-2">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                        </svg>
-                      </a>
-                    </div><!-- /.service-body -->
-                  </div><!-- /.service-item -->
-                </div>
-                <!-- service item #6 -->
-                <div class="swiper-slide">
-                  <div class="service-item">
-                    <div class="service-body">
-                      <div class="service-icon"><i class="icon-battery"></i></div>
-                      <h4 class="service-title" id="enterprise-development">
-                        <a href="services.html#services">Enterprise and Supplier Development</a>
-                      </h4>
-                      <p class="service-desc text-truncate-5">Enterprise and supplier development for measured entities, including implementation and grant management.</p>
-                      <a href="services.html#services" class="btn btn-primary btn-link same-hover arrow-hover-flip-up">
-                        <span>Read More</span>
-                        <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10"
-                          height="10" xmlns="http://www.w3.org/2000/svg">
-                          <g class="arrow-flip-path-1">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                          <g class="arrow-flip-path-2">
-                            <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                          </g>
-                        </svg>
-                      </a>
-                    </div><!-- /.service-body -->
-                  </div><!-- /.service-item -->
-                </div>
-              </div><!-- /.swiper-wrapper-->
-            </div><!-- /.swiper-->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-        <div class="row">
-          <div class="col-sm-12 col-md-8 col-lg-6">
-            <p class="text-link text-wrap-balance mt-40 mb-30">EBCorp provides development and transaction advisory support to projects across all sectors of the economy.
-              <a href="contact-us.html#contact" class="btn btn-secondary btn-link btn-underlined arrow-hover-flip-up">
-                <span> Contact EBCorp</span>
-                <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10" height="10"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <g class="arrow-flip-path-1">
-                    <path
-                      d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                      fill="currentColor"></path>
-                  </g>
-                  <g class="arrow-flip-path-2">
-                    <path
-                      d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                      fill="currentColor"></path>
-                  </g>
-                </svg>
-              </a>
-            </p>
-            <a href="contact-us.html#contact" class="btn btn-primary same-hover arrow-hover-flip-up">
-              <span>Discuss a Project</span>
-              <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="12" height="12"
-                xmlns="http://www.w3.org/2000/svg">
-                <g class="arrow-flip-path-1">
-                  <path
-                    d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                    fill="currentColor"></path>
-                </g>
-                <g class="arrow-flip-path-2">
-                  <path
-                    d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                    fill="currentColor"></path>
-                </g>
-              </svg>
-            </a>
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
+        <div class="intro-head">
+          <span class="section-kicker">What we do</span>
+          <h2>Clear strategic support for capital, grants and complex transactions.</h2>
+          <p>EBCorp works with organisations that need more than generic consulting. Our model brings together commercial discipline, technical insight and programme delivery to help projects become fundable, implementable and investable.</p>
+        </div>
+
+        <div class="service-list-compact">
+          <article class="service-panel" id="government-grant-administration">
+            <div class="index-tag">01</div>
+            <h3>Government Grant administration, implementation and management</h3>
+            <p>Programme setup, administration, monitoring, compliance, disbursement support and implementation management for grant-funded initiatives.</p>
+          </article>
+
+          <article class="service-panel" id="transaction-advisory">
+            <div class="index-tag">02</div>
+            <h3>Transaction advisory – financial, legal, technical and B-BBEE</h3>
+            <p>End-to-end transaction advisory covering legal and financial structuring, technical due diligence, and B-BBEE alignment to support business and investor confidence.</p>
+          </article>
+
+          <article class="service-panel" id="capital-projects-appraisal">
+            <div class="index-tag">03</div>
+            <h3>Capital Projects Appraisal</h3>
+            <p>Assessment, feasibility review and appraisal of capital projects to support funding, investment and strategic decision-making.</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-<section class="services-layout4 services-page-feature pb-0">
+    <section class="service-detail">
       <div class="container">
-        <div class="heading-layout2">
-          <div class="row">
-            <div class="col-sm-12 col-md-12 col-lg-6">
-              <h2 class="heading-subtitle">Transaction advisory for projects across all sectors.</h2>
-              <h3 class="heading-title mb-50">Putting right solutions and methods in place.</h3>
-            </div><!-- /.col-lg-6 -->
-          </div><!-- /.row -->
-          <div class="row services-feature-intro align-items-stretch mb-50">
-            <div class="col-sm-12 col-lg-6">
-              <div class="services-feature-image">
-                <img src="assets/images/ebcorp/business_boardroom_high_quality.jpg" alt="Business team working together on a project">
-              </div>
-            </div>
-            <div class="col-sm-12 col-lg-6">
-              <div class="services-feature-copy">
-                <p class="heading-desc fz-26 fz-16-md fw-bold color-secondary mb-30">EBCorp provides bespoke development and transaction advisory services to public- and private-sector projects across all sectors of the economy.</p>
-              <p class="heading-desc">Its work includes technical consulting, grant administration and management, capital projects appraisal, project finance and syndication, BEE strategy advisory, SME development, coaching and mentorship, and enterprise and supplier development.
-              </p>
-              </div>
-            </div><!-- /.col-lg-6 -->
-          </div><!-- /.row -->
-        </div><!-- /.heading -->
-        <div class="row row-gutter-0">
-          <!-- service item #1 -->
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="service-item">
-              <div class="service-body">
-                <h4 class="service-title">
-                  <a href="services.html#services">Technical consulting</a>
-                </h4>
-                <p class="service-desc text-truncate-4">Technical consulting for investment and development projects across sectors.
-                </p>
-                <a href="services.html#services" class="btn btn-secondary btn-link same-hover arrow-hover-flip-up">
-                  <span>Read More</span>
-                  <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10" height="10"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g class="arrow-flip-path-1">
-                      <path
-                        d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                        fill="currentColor"></path>
-                    </g>
-                    <g class="arrow-flip-path-2">
-                      <path
-                        d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                        fill="currentColor"></path>
-                    </g>
-                  </svg>
-                </a>
-                <div class="service-icon"><i class="icon-idea-1"></i></div>
-              </div><!-- /.service-body -->
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-3 -->
-          <!-- service item #2 -->
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="service-item">
-              <div class="service-body">
-                <h4 class="service-title">
-                  <a href="services.html#services">Grant administration</a>
-                </h4>
-                <p class="service-desc text-truncate-4">Administration, implementation and management of government grant programmes.
-                </p>
-                <a href="services.html#services" class="btn btn-secondary btn-link same-hover arrow-hover-flip-up">
-                  <span>Read More</span>
-                  <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10" height="10"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g class="arrow-flip-path-1">
-                      <path
-                        d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                        fill="currentColor"></path>
-                    </g>
-                    <g class="arrow-flip-path-2">
-                      <path
-                        d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                        fill="currentColor"></path>
-                    </g>
-                  </svg>
-                </a>
-                <div class="service-icon"><i class="icon-analytics"></i></div>
-              </div><!-- /.service-body -->
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-3 -->
-          <!-- service item #3 -->
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="service-item">
-              <div class="service-body">
-                <h4 class="service-title">
-                  <a href="services.html#services">Project appraisal and finance</a>
-                </h4>
-                <p class="service-desc text-truncate-4">Project appraisal, due diligence, finance and syndication support.
-                </p>
-                <a href="services.html#services" class="btn btn-secondary btn-link same-hover arrow-hover-flip-up">
-                  <span>Read More</span>
-                  <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10" height="10"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g class="arrow-flip-path-1">
-                      <path
-                        d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                        fill="currentColor"></path>
-                    </g>
-                    <g class="arrow-flip-path-2">
-                      <path
-                        d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                        fill="currentColor"></path>
-                    </g>
-                  </svg>
-                </a>
-                <div class="service-icon"><i class="icon-team-management"></i></div>
-              </div><!-- /.service-body -->
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-3 -->
-          <!-- service item #4 -->
-          <div class="col-sm-6 col-md-6 col-lg-3">
-            <div class="service-item">
-              <div class="service-body">
-                <h4 class="service-title">
-                  <a href="services.html#services">Enterprise development</a>
-                </h4>
-                <p class="service-desc text-truncate-4">BEE strategy, SME development, coaching, mentorship and supplier development.
-                </p>
-                <a href="services.html#services" class="btn btn-secondary btn-link same-hover arrow-hover-flip-up">
-                  <span>Read More</span>
-                  <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="10" height="10"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <g class="arrow-flip-path-1">
-                      <path
-                        d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                        fill="currentColor"></path>
-                    </g>
-                    <g class="arrow-flip-path-2">
-                      <path
-                        d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                        fill="currentColor"></path>
-                    </g>
-                  </svg>
-                </a>
-                <div class="service-icon"><i class="icon-agreement"></i></div>
-              </div><!-- /.service-body -->
-            </div><!-- /.service-item -->
-          </div><!-- /.col-lg-3 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
+        <div class="detail-wrap">
+          <div class="detail-image" aria-label="Business project team"></div>
+          <div class="detail-copy">
+            <span class="section-kicker">Full service capability</span>
+            <h2>Strategic advisory across every stage of growth.</h2>
+            <p>Beyond the three headline services, EBCorp supports organisations with wider project and enterprise development expertise spanning project finance, strategic B-BBEE advisory, SME and supplier development, and implementation support across public and private sector initiatives.</p>
+            <ul>
+              <li>Project finance and syndication support</li>
+              <li>B-BBEE strategy and SME development</li>
+              <li>Enterprise and supplier development planning</li>
+              <li>Technical consulting and programme governance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </section>
 
-<section class="banner-layout5 bg-overlay bg-parallax pb-70">
-      <div class="bg-img"><img src="assets/images/ebcorp/advisory-consultation.jpg" alt="Business professionals discussing a project"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-12 col-lg-6">
-            <div class="video-btn-wrapper">
-              <a class="video-btn"
-                href="about-us.html#founder" aria-label="Meet EBCorp founder Ambani Ramaru">
-                <div class="video-player">
-                  <i class="icon-arrow-up-right"></i>
-                </div>
-                <img src="assets/images/icons/arrow-video.png" alt="arrow" class="video-arrow">
-              </a>
-            </div><!-- /.video-btn-wrapper -->
-          </div><!-- /.col-lg-6 -->
-          <div class="col-12 col-md-12 col-lg-6">
-            <div class="heading-layout2 heading-light">
-              <h2 class="heading-subtitle">Bespoke development and transaction advisory services.</h2>
-              <h3 class="heading-title">Experience across public- and private-sector projects in all sectors of the economy.
-              </h3>
-              <p class="heading-desc mb-30">EBCorp supports projects from screening and appraisal through implementation, disbursement and closure.
-              </p>
-              <ul class="links-list d-flex flex-wrap pt-30 list-unstyled mb-0">
-                <li><a href="services.html#services">Grant Administration</a></li>
-                <li><a href="services.html#services">Project Finance</a></li>
-                <li><a href="services.html#services">SME Development</a></li>
-              </ul>
-            </div> <!-- /.heading-layout2 -->
-          </div><!-- /.col-lg-6 -->
-        </div><!-- /.row -->
-      </div><!-- /.container -->
+    <section class="cta-band">
+      <div class="container text-center">
+        <a href="contact-us.html#contact" class="btn btn-primary same-hover arrow-hover-flip-up">
+          <span>Discuss your project</span>
+        </a>
+      </div>
     </section>
 
     <footer class="footer">
@@ -519,21 +350,12 @@
           <div class="row">
             <div class="col-sm-12 col-md-12 col-lg-8">
               <div class="footer-widget-about">
-                <h6 class="footer-widget-title">For information about EBCorp's services and project experience, contact the team.</h6>
+                <h6>For information about EBCorp's services and project experience, contact the team.</h6>
                 <a href="contact-us.html#contact" class="btn btn-white arrow-hover-flip-up">
                   <span>Contact EBCorp</span>
-                  <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="12" height="12"
-                       xmlns="http://www.w3.org/2000/svg">
-                    <g class="arrow-flip-path-1">
-                      <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                    </g>
-                    <g class="arrow-flip-path-2">
-                      <path
-                              d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z"
-                              fill="currentColor"></path>
-                    </g>
+                  <svg class="arrow-flip" enable-background="new 0 0 64 64" viewBox="0 0 64 64" width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+                    <g class="arrow-flip-path-1"><path d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z" fill="currentColor"></path></g>
+                    <g class="arrow-flip-path-2"><path d="m56 6h-48c-1.104 0-2 .896-2 2s.896 2 2 2h43.171l-44.585 44.586c-.781.781-.781 2.047 0 2.828.391.391.902.586 1.414.586s1.024-.195 1.414-.586l44.586-44.586v43.172c0 1.104.896 2 2 2s2-.896 2-2v-48c0-1.104-.896-2-2-2z" fill="currentColor"></path></g>
                   </svg>
                 </a>
               </div><!-- /.footer-widget-nav -->
@@ -546,13 +368,12 @@
         <div class="container">
           <div class="row align-items-center">
             <div class="col-12">
-              <a href="contact-us.html#contact"
-                 class="contatct-text d-flex justify-content-between arrow-hover-flip-up">
+              <a href="contact-us.html#contact" class="contatct-text d-flex justify-content-between arrow-hover-flip-up">
               </a>
             </div><!-- /.col-12 -->
             <div class="col-12 d-flex flex-wrap justify-content-between align-items-center">
               <div class="footer-copyrights my-2">
-                <span class="fz-14">&copy;2026 | Eagles & Butterflies Corporation - All Rights Reserved.</span>
+                <span class="fz-14">&copy;2026 | Eagles &amp; Butterflies Corporation - All Rights Reserved.</span>
               </div>
               <nav>
                 <ul class="footer-copyright-links d-flex align-items-center list-unstyled flex-wrap my-2">
@@ -569,7 +390,7 @@
   </div><!-- /.wrapper -->
 
   <script src="assets/js/libraries.js"></script>
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
